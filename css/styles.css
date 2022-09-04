@@ -10,6 +10,9 @@
   --notwhite: #f5f4fa;
   --footerlinks: #ffffff99;
   --productborder: #eeeeee;
+  --background: #2f303a66;
+  --iconcolor: #afb1b8;
+  --footericon: #ffffff1a;
 }
 
 /* Global styles used throughout whole website ---------------------*/
@@ -46,9 +49,6 @@ ul {
 }
 .section-about-us {
   padding: 94px 0 0 0;
-}
-.section-our-clients {
-  padding: 50px 0 94px 0;
 }
 .whole-page {
   width: 1600px;
@@ -116,13 +116,32 @@ ul {
 .link-no-underline {
   text-decoration: none;
 }
+.icons-header {
+  fill: var(--grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-link-styl:hover,
+.contact-link-styl:focus {
+  fill: var(--blue);
+}
+.icon-spacing {
+  margin-right: 1px;
+}
+.content-icon {
+  margin-right: 1px;
+}
 .header-separator {
   border-bottom: solid 1px var(--lightcream);
 }
 .top-section {
-  background-color: var(--darkgrey);
+  background-color: #2f303a;
+  padding: 200px 452px 200px 452px;
+  background-image: linear-gradient(to bottom, #2f303a66 0%, #2f303a66 100%),
+    url("../images/main/solution-background.jpg");
+  background-size: 1600px;
   color: var(--white);
-  width: 100%;
   display: flex;
   gap: 30px;
   flex-direction: column;
@@ -138,17 +157,31 @@ ul {
   letter-spacing: 0.06em;
 }
 .button-type-order {
-  background-color: var(--blue);
-  border-style: none;
+  font-family: "Roboto";
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
   border-radius: 4px;
-  cursor: pointer;
-  color: var(--white);
-  width: 200px;
-  height: 50px;
   font-weight: 700;
   font-size: 16px;
+  line-height: 1.88;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 10px 41px 10px 42px;
 }
-
+.top-section button:hover,
+.top-section button:focus {
+  background: #f5f4fa;
+  box-shadow: 0px 3px 1px #2196f31a, 0px 1px 2px #2196f314,
+    0px 2px 2px #2196f31f;
+  border-radius: 4px;
+  color: #212121;
+}
 /* Top web section + order button----------------------------------------- */
 
 .our-services {
@@ -253,6 +286,7 @@ div {
   font-size: 16px;
 }
 .crew-member-part {
+  position: relative;
   background-color: var(--white);
   box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
     0px 2px 1px rgb(0 0 0 / 20%);
@@ -260,7 +294,19 @@ div {
   text-align: center;
   margin: 0;
 }
-
+.our-crew-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  grid-gap: 10px;
+}
+.our-crew-icon {
+  width: 44px;
+  height: 44px;
+  background-color: var(--white);
+  border-radius: 50%;
+  fill: var(--iconcolor);
+}
 /* Crew part style  ----------------------------------------------------------*/
 
 .product-portfolio {
@@ -292,7 +338,44 @@ div {
   margin: 0 0 0 24px;
   line-height: 1.88;
 }
-
+.our-clients-container {
+  padding: 94px 0 94px 0;
+  width: 1200px;
+  margin: 0 auto;
+}
+.container-clients {
+  padding: 0px 0 94px 0;
+  display: flex;
+  justify-content: center;
+}
+.clients-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style: none;
+}
+.clients-logo {
+  border-radius: 4px;
+  border: var(--iconcolor) solid 1px;
+  width: 170px;
+  height: 92px;
+  fill: var(--iconcolor);
+}
+.logo-cli {
+  fill: var(--iconcolor);
+}
+.clients-logos a:hover,
+.clients-logos a:focus {
+  border-color: #2196f3;
+}
+.our-clients-container a:hover,
+.our-clients-container a:focus {
+  border-color: #2196f3;
+}
+.our-clients-container a:hover,
+.our-clients-container a:focus {
+  fill: #2196f3;
+}
 /* Product+portfolio style --------------------------------------------*/
 
 .footer {
@@ -325,5 +408,40 @@ address {
 .footer-links-li-margin {
   margin: 9px 0 9px 0;
 }
-
+.footer-header {
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  margin-left: 70px;
+  margin-bottom: 20px;
+  font-weight: 14px;
+}
+.footer-section {
+  flex-direction: column;
+  color: var(--white);
+  display: flex;
+  flex-direction: row;
+}
+.footer-icons {
+  display: flex;
+  gap: 10px;
+  margin-left: 70px;
+  list-style: none;
+  padding: 0;
+}
+.footer-icon {
+  width: 44px;
+  height: 44px;
+  background-color: var(--footericon);
+  border-radius: 50%;
+  fill: none;
+}
+.footer-icon:hover,
+.footer-icon:focus,
+.our-crew-icon:hover,
+.our-crew-icon:focus {
+  background-color: var(--blue);
+  fill: var(--white);
+  cursor: pointer;
+}
 /* footer style> logo + adres + tel+email ----------------------------------*/
