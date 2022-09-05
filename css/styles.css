@@ -297,7 +297,7 @@ div {
 .our-crew-icons {
   display: flex;
   justify-content: center;
-  margin-top: 16px;
+  margin: 16px 0 30px 0;
   grid-gap: 10px;
 }
 .our-crew-icon {
@@ -350,7 +350,6 @@ div {
 }
 .clients-logos {
   display: flex;
-  flex-wrap: wrap;
   gap: 30px;
   list-style: none;
 }
@@ -361,20 +360,10 @@ div {
   height: 92px;
   fill: var(--iconcolor);
 }
-.logo-cli {
-  fill: var(--iconcolor);
-}
-.clients-logos a:hover,
-.clients-logos a:focus {
-  border-color: #2196f3;
-}
-.our-clients-container a:hover,
-.our-clients-container a:focus {
-  border-color: #2196f3;
-}
-.our-clients-container a:hover,
-.our-clients-container a:focus {
-  fill: #2196f3;
+.clients-logo:hover,
+.clients-logo:focus {
+  fill: var(--blue);
+  border: var(--blue) solid 1px;
 }
 /* Product+portfolio style --------------------------------------------*/
 
